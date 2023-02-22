@@ -12,7 +12,7 @@ Please note that this repo and the [rl training repo](https://github.com/indirec
 
 The repo contains the trained PA-CADRL policy introduced in the paper above.
 
-Our work is based upon the previous work mentioned below:
+Our work is based on the previous work mentioned below:
 
 **Journal Version:** M. Everett, Y. Chen, and J. P. How, "Collision Avoidance in Pedestrian-Rich Environments with Deep Reinforcement Learning", IEEE Access Vol. 9, 2021, pp. 10357-10377. [10.1109/ACCESS.2021.3050338](http://doi.org/10.1109/ACCESS.2021.3050338), [Arxiv PDF](https://arxiv.org/abs/1910.11689)
 
