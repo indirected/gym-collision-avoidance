@@ -170,8 +170,8 @@ class Config(object):
             }
         self.setup_obs()
     
-        # self.AGENT_SORTING_METHOD = "closest_last"
-        self.AGENT_SORTING_METHOD = "closest_first"
+        self.AGENT_SORTING_METHOD = "closest_last"
+        # self.AGENT_SORTING_METHOD = "closest_first"
         # self.AGENT_SORTING_METHOD = "time_to_impact"
 
     def setup_obs(self):
@@ -270,7 +270,8 @@ class FullTestSuite(EvaluateConfig):
 
         # Normal
         self.POLICIES_TO_TEST = [
-            'CADRL', 'RVO', 'GA3C-CADRL-10'
+            'PA-CADRL',
+            # 'CADRL', 'RVO', 'GA3C-CADRL-10'
             # 'GA3C-CADRL-4-WS-4-1', 'GA3C-CADRL-4-WS-4-2', 'GA3C-CADRL-4-WS-4-3', 'GA3C-CADRL-4-WS-4-4', 'GA3C-CADRL-4-WS-4-5',
             # 'GA3C-CADRL-4-WS-6-1', 'GA3C-CADRL-4-WS-6-2', 'GA3C-CADRL-4-WS-6-3', 'GA3C-CADRL-4-WS-6-4',
             # 'GA3C-CADRL-4-WS-8-1', 'GA3C-CADRL-4-WS-8-2', 'GA3C-CADRL-4-WS-8-3', 'GA3C-CADRL-4-WS-8-4',
