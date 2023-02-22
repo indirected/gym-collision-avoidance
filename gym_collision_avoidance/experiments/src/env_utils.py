@@ -478,6 +478,29 @@ policies = {
             'max_num_other_agents_observed': 19,
             },
         },
+    
+    'GA3C-CADRL-Everett': {
+        'policy': 'GA3C_CADRL',
+        'checkpt_dir': 'offline-run-20221128_172102-2h02suqi',
+        # 'checkpt_dir': 'run-20220724_085753-1y8nth5k',
+        'checkpt_name': 'network_01990000',
+        'sensors': ['other_agents_states'],
+        'sensor_args': {
+            'agent_sorting_method': 'closest_last',
+            'max_num_other_agents_observed': 19,
+            },
+    },
+
+    'PA-CADRL': {
+        'policy': 'GA3C_CADRL',
+        'checkpt_dir': 'offline-run-20221116_170046-26dtd4xg',
+        'checkpt_name': 'network_01990000',
+        'sensors': ['other_agents_states'],
+        'sensor_args': {
+            'agent_sorting_method': 'closest_last',
+            'max_num_other_agents_observed': 19,
+            },
+    },
 
     # 'GA3C-CADRL-4-LSTM': {
     #     'policy': 'GA3C_CADRL',

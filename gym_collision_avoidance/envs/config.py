@@ -270,7 +270,7 @@ class FullTestSuite(EvaluateConfig):
 
         # Normal
         self.POLICIES_TO_TEST = [
-            'PA-CADRL',
+            'PA-CADRL', 'GA3C-CADRL-Everett',
             # 'CADRL', 'RVO', 'GA3C-CADRL-10'
             # 'GA3C-CADRL-4-WS-4-1', 'GA3C-CADRL-4-WS-4-2', 'GA3C-CADRL-4-WS-4-3', 'GA3C-CADRL-4-WS-4-4', 'GA3C-CADRL-4-WS-4-5',
             # 'GA3C-CADRL-4-WS-6-1', 'GA3C-CADRL-4-WS-6-2', 'GA3C-CADRL-4-WS-6-3', 'GA3C-CADRL-4-WS-6-4',
