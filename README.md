@@ -1,10 +1,10 @@
 # gym-collision-avoidance
 
-<img src="docs/_static/combo.gif" alt="Agents spelling ``CADRL''">
+<img src="docs/_static/PA-CADRL.png" alt="Comparison of PA-CADRL and GA3C-CADRL in a 50 agent circular scenario">
 
 This is the code associated with the following publications:
 
-[mention paper here]
+**PA-CADRL:** Mohammad Bahrami Karkevandi, Samaneh Hosseini Semnani, "Multi-Agent Collision Avoidance with Provident Agents using Deep-Reinforcement Learning"[preprint]
 
 In this paper/repo we add providence to the agents by using their relative velocities (in a sense) and detect which agents are moving aggressively toward each other to penalize them. This repo adds this capability to the original code, nothing is removed. Additionally, the rewarding mechanism has been improved to favor penalizing collisions prior to rewarding goal achievements.
 
