@@ -183,6 +183,11 @@ def full_test_suite(num_agents, test_case_index, policies='learning', agents_dyn
     agents = cadrl_test_case_to_agents(cadrl_test_case, policies=policies, agents_dynamics=agents_dynamics, agents_sensors=agents_sensors, prev_agents=prev_agents)
     return agents
 
+def preset_test_suite(num_agents, test_case_index, policies='learning', agents_dynamics='unicycle', agents_sensors=[], vpref_constraint=False, radius_bounds=None, prev_agents=None):
+    cadrl_test_case = preset_testCases(num_agents, full_test_suite=False, vpref_constraint=vpref_constraint, radius_bounds=radius_bounds)[test_case_index]
+    agents = cadrl_test_case_to_agents(cadrl_test_case, policies=policies, agents_dynamics=agents_dynamics, agents_sensors=agents_sensors, prev_agents=prev_agents)
+    return agents
+
 def full_test_suite_carrl(num_agents, test_case_index, seed=None, other_agent_policy_options=None):
     cadrl_test_case = preset_testCases(num_agents, full_test_suite=True, vpref_constraint=False, radius_bounds=None, carrl=True, seed=seed)[test_case_index]
     agents = []
@@ -392,7 +397,7 @@ def preset_testCases(num_agents, full_test_suite=False, vpref_constraint=False, 
                 [-2.0, 0.0, 2.0, 0.0, 0.5, 0.4]
                 ]))
 
-        elif num_agents == 3 or num_agents == 4:
+        elif num_agents == 3:
             test_cases = []
             # hardcoded to be 3 agents for now
             d = 3.0
@@ -418,6 +423,9 @@ def preset_testCases(num_agents, full_test_suite=False, vpref_constraint=False, 
                 [-3.0, 1.5, 3.0, -1.5, 1.0, 0.5],
                 [-3.0, -1.5, 3.0, 1.5, 1.0, 0.5]
                 ]))
+        
+        elif num_agents == 4:
+            test_cases = []
             # hardcoded to be 4 agents for now
             test_cases.append(np.array([
                 [-3.0, 0.0, 3.0, 0.0, 1.0, 0.3],
@@ -508,6 +516,46 @@ def preset_testCases(num_agents, full_test_suite=False, vpref_constraint=False, 
             test_cases = []
 
             radius = 10
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+        
+        elif num_agents == 30:
+            test_cases = []
+
+            radius = 15
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+
+            radius = 20
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+        
+        elif num_agents == 40:
+            test_cases = []
+
+            radius = 15
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+
+            radius = 20
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+        
+        elif num_agents == 50:
+            test_cases = []
+
+            radius = 20
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+
+            radius = 25
+            tc = gen_circle_test_case(num_agents, radius)
+            test_cases.append(tc)
+        
+        elif num_agents == 60:
+            test_cases = []
+
+            radius = 40
             tc = gen_circle_test_case(num_agents, radius)
             test_cases.append(tc)
 
