@@ -69,6 +69,7 @@ class Agent(object):
         # Global Frame states
         if px is not None and py is not None:
             self.pos_global_frame = np.array([px, py], dtype='float64')
+            self.pos_global_frame_init = np.array([px, py], dtype='float64')
         if gx is not None and gy is not None:
             self.goal_global_frame = np.array([gx, gy], dtype='float64')
         self.vel_global_frame = np.array([0.0, 0.0], dtype='float64')
